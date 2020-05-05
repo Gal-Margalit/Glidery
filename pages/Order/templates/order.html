@@ -5,33 +5,79 @@
     <title>order</title>
     <base href="C:\group15\"/>
     <link rel="stylesheet" href="pages/order/static/css/order.css">
+    <link rel="stylesheet" href="static/css/webStyle.css">
     <script src="pages/order/static/js/order.js"></script>
 
+
 </head>
-<body dir="rtl">
-    <header></header>
-    <main>
+<body dir="rtl" class="general-style">
+    <header>
         <!-- Tab links -->
         <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+            <button class="tablinks" onclick="openProduct(event, 'IceCream')">גלידה</button>
+            <button class="tablinks" onclick="openProduct(event, 'Yogurt')">יוגורט</button>
+            <button class="tablinks" onclick="openProduct(event, 'Cookie')">קוקילידה</button>
         </div>
-
+    </header>
+    <main>
         <!-- Tab content -->
-        <div id="London" class="tabcontent">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
+        <div id="IceCream" class="tabcontent">
+            <div class="description">
+                <h3>גלידה</h3>
+                <p>עבור גלידה במשקל חצי קילו גלידה ניתן לבחור בין 1 ל 3 טעמים שונים, מגיע עם 3 גביעים וכפיות.
+                    <br><br>
+                    עבור גלידה במשקל קילו ניתן לבחור עד בין 1 ל 5 טעמים שונים, מגיע עם 5 גביעים וכפיות.
+                    <br><br>
+                    לפירוט אודות טעם הגלידה הרצוי ניתן ללחוץ על התמונה המתאימה
+                </p>
+            </div>
+
+            <form method="get"  action="/order">
+                <fieldset>
+                    <legend>בחר בין 1 ל 3 טעמים שונים</legend>
+                    <span class="taste">
+                        <img src="pages/order/static/img/fistuk.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                        <input type="checkbox" id="fistuk" name="ice-cream-tastes" value="fistuk">
+                        <label for="fistuk">פיסטוק</label>
+                    </span>
+
+                    <span class="taste">
+                        <img src="pages/order/static/img/oreoCream.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                        <input type="checkbox" id="oreo-cream" name="ice-cream-tastes" value="oreo-cream">
+                        <label for="oreo-cream">קרם עוגיות</label>
+                    </span>
+
+                    <span class="taste">
+                        <img src="pages/order/static/img/pavlova.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                        <input type="checkbox" id="pavlova" name="ice-cream-tastes" value="pavlova">
+                        <label for="pavlova">פבלובה</label>
+                    </span>
+
+                    <span class="taste">
+                         <img src="pages/order/static/img/frenchVanalla.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                        <input type="checkbox" id="french-vanilla" name="ice-cream-tastes" value="french-vanilla">
+                        <label for="french-vanilla">ווניל צרפתי</label>
+                    </span>
+
+
+                </fieldset>
+                <input type="submit" value="Submit">
+
+            </form>
         </div>
 
-        <div id="Paris" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+        <div id="Yogurt" class="tabcontent">
+            <div class="description">
+                <h3>יוגורט</h3>
+                <p>עבור יוגורט במשקל חצי קילו או קילו, ניתן לבחור בין 1 ל 3 טעמים שונים, מגיע עם 3 גביעים וכפיות.</p>
+            </div>
         </div>
 
-        <div id="Tokyo" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+        <div id="Cookie" class="tabcontent">
+            <div class="description">
+                <h3>קוקילידה</h3>
+                <p>עבור כל יחידה אחת של קוקילידה יש לבחור סוג גלידה וסוג עוגיה</p>
+            </div>
         </div>
 
     </main>
