@@ -32,32 +32,45 @@
                 </p>
             </div>
 
-            <form method="get"  action="/order">
+            <form method="get"  action="/order" >
                 <fieldset>
-                    <legend>בחר בין 1 ל 3 טעמים שונים</legend>
-                    <span class="taste">
-                        <img src="pages/order/static/img/fistuk.jpg" alt="ice-cream-taste" class="taste-image"><br>
-                        <input type="checkbox" id="fistuk" name="ice-cream-tastes" value="fistuk">
-                        <label for="fistuk">פיסטוק</label>
-                    </span>
+                    <div class="add-product-bar">
+                        משקל קופסא בק"ג
+                        <select name="amount">
+                            <option value="0.5">0.5</option>
+                            <option value="1">1</option>
+                        </select>
 
-                    <span class="taste">
-                        <img src="pages/order/static/img/oreoCream.jpg" alt="ice-cream-taste" class="taste-image"><br>
-                        <input type="checkbox" id="oreo-cream" name="ice-cream-tastes" value="oreo-cream">
-                        <label for="oreo-cream">קרם עוגיות</label>
-                    </span>
+                    </div>
 
-                    <span class="taste">
-                        <img src="pages/order/static/img/pavlova.jpg" alt="ice-cream-taste" class="taste-image"><br>
-                        <input type="checkbox" id="pavlova" name="ice-cream-tastes" value="pavlova">
-                        <label for="pavlova">פבלובה</label>
-                    </span>
+                    <p>בחר בין 1 ל 3 טעמים שונים</p>
+                    <div class="wrapper">
+                        <div> <img src="pages/order/static/img/fistuk.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                            <input type="checkbox" id="fistuk" name="ice_cream_tastes" value="fistuk" >
+                            <label for="fistuk">פיסטוק</label>
+                        </div>
+                        <div> <img src="pages/order/static/img/oreoCream.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                            <input type="checkbox" id="oreo-cream" name="ice_cream_tastes" value="oreo-cream" >
+                            <label for="oreo-cream">קרם עוגיות</label></div>
+                        <div> <img src="pages/order/static/img/pavlova.jpg" alt="ice-cream-taste" class="taste-image"><br>
+                            <input type="checkbox" id="pavlova" name="ice_cream_tastes" value="pavlova" >
+                            <label for="pavlova">פבלובה</label>
+                        </div>
 
-                    <span class="taste">
-                         <img src="pages/order/static/img/frenchVanalla.jpg" alt="ice-cream-taste" class="taste-image"><br>
-                        <input type="checkbox" id="french-vanilla" name="ice-cream-tastes" value="french-vanilla">
-                        <label for="french-vanilla">ווניל צרפתי</label>
-                    </span>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 </fieldset>

@@ -40,9 +40,29 @@
 .description{
     background-color: #FFEBF5;
     text-align: center;
+
 }
 
 fieldset {
     border: 1px solid #C00060;
 
+}
+
+.add-product-bar{
+    background-color: #FFEBF5;
+    padding: 14px 16px;
+
+}
+
+.taste-image{
+    border-radius: 50%;
+}
+
+.wrapper {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    /*grid-template-rows: 250px 250px;*/
 }
