@@ -1,3 +1,5 @@
+//-----------------tab links----------------
+
 function openProduct(evt, ProductName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -18,4 +20,59 @@ function openProduct(evt, ProductName) {
     document.getElementById(ProductName).style.display = "block";
     evt.currentTarget.className += " active";
 }//openProduct
+
+// --------------select amount text code----------------
+
+function amountSelect() {
+    if (document.getElementById("half").selected) {
+        document.getElementById("half-text").style.display = "block";
+        document.getElementById("one-text").style.display = "none";
+    } else {
+        document.getElementById("half-text").style.display = "none";
+        document.getElementById("one-text").style.display = "block";
+    }
+}
+
+// --------------lightBox code----------------
+
+// Open the Modal
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+}
 

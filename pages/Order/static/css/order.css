@@ -1,11 +1,10 @@
+@import "/group15/static/css/webStyle.css";
+@import "/group15/pages/order/static/css/lightbox.css";
+
 /* Style the tab */
 .tab {
     overflow: hidden;
-
-    border: 1px solid #C00060;
-    border-bottom-color: white;
     background-color: #FFEBF5;
-
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -32,9 +31,9 @@
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #C00060;
+    padding: 12px 12px;
     border-top: none;
+
 }
 
 .description{
@@ -44,25 +43,89 @@
 }
 
 fieldset {
-    border: 1px solid #C00060;
-
+    border: 2px solid #C00060;
+    padding: 0px 0px;
 }
 
 .add-product-bar{
     background-color: #FFEBF5;
-    padding: 14px 16px;
+    padding: 1px 16px;
+    overflow: auto;
+}
 
+.amount-area{
+    padding: 12px 0px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.quantity-area{
+    float: left;
+}
+
+.amount-text{
+    padding: 13px 16px;
+}
+
+#one-text {
+    display: none;
 }
 
 .taste-image{
     border-radius: 50%;
 }
 
-.wrapper {
+.tastes-wrapper div{
+    display: inline-block;
+    padding: 12px 25px;
     text-align: center;
+}
+
+.tastes-wrapper {
+    display: flex;
     justify-content: center;
     align-content: center;
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
-    /*grid-template-rows: 250px 250px;*/
+
+}
+
+/*-------------Arrow Button--------------*/
+
+.button {
+    border-radius: 10px;
+    background-color: #C00060;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    float: left;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
