@@ -1,0 +1,27 @@
+/*reminder - this css is imported also to the order page*/
+@import "/group15/static/css/webStyle.css";
+
+.catalog{
+    padding: 12px 12px;
+}
+.description{
+    background-color: #FFEBF5;
+    text-align: center;
+    margin: 0px 0px;
+}
+
+.taste-image{
+    border-radius: 50%;
+}
+
+.tastes-wrapper div{
+    display: inline-block;
+    padding: 12px 25px;
+    text-align: center;
+}
+
+.tastes-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
