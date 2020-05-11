@@ -68,6 +68,10 @@ fieldset {
     display: none;
 }
 
+.taste-image{
+    border-radius: 50%;
+}
+
 /*-------------Arrow Cart Button--------------*/
 
 .button {

@@ -10,6 +10,16 @@
     margin-right: 200px;
 }
 
+.description{
+    background-color: #FFEBF5;
+    text-align: center;
+    margin: 0px 0px;
+}
+
+h2{
+    text-align: center;
+}
+
 *{
     box-sizing: border-box;
 }

@@ -3,10 +3,9 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>order</title>
+    <title>עמוד מוצר</title>
     <base href="C:\group15\"/>
-    <link rel="stylesheet" href="pages/order/static/css/order.css">
-    <script src="pages/order/static/js/order.js"></script>
+    <link rel="stylesheet" href="pages/product/static/css/product.css">
 
 
 </head>
@@ -14,102 +13,21 @@
     <header>
     </header>
     <main>
-        <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks" onclick="openProduct(event, 'IceCream')">גלידה</button>
-            <button class="tablinks" onclick="openProduct(event, 'Yogurt')">יוגורט</button>
-            <button class="tablinks" onclick="openProduct(event, 'Cookie')">קוקילידה</button>
+        <h2>הטעמים שלנו</h2>
+        <div class="description">
+            <h3>גלידה</h3>
+            <p>מותג גלידרי - הגלידה האיכותית, חומרי הגלם הטובים בעולם, ללא חומרים משמרים, ללא צבעי מאכל מלאכותיים ומפירות טבעיים בלבד!
+                <br><br>
+                לפירוט אודות טעם הגלידה הרצוי ניתן ללחוץ על התמונה המתאימה
+            </p>
         </div>
-        <!-- Tab content -->
-        <div id="IceCream" class="tabcontent">
-            <div class="description">
-                <h3>גלידה</h3>
-                <p>עבור גלידה במשקל חצי קילו גלידה ניתן לבחור בין 1 ל 3 טעמים שונים, מגיע עם 3 גביעים וכפיות.
-                    <br><br>
-                    עבור גלידה במשקל קילו ניתן לבחור עד בין 1 ל 5 טעמים שונים, מגיע עם 5 גביעים וכפיות.
-                    <br><br>
-                    לפירוט אודות טעם הגלידה הרצוי ניתן ללחוץ על התמונה המתאימה
-                </p>
-            </div>
-
-            <form method="get"  action="/order" >
-                <fieldset>
-                    <div class="add-product-bar">
-                        משקל קופסא בק"ג
-                        <select name="amount">
-                            <option value="0.5">0.5</option>
-                            <option value="1">1</option>
-                        </select>
-                    </div>
-
-<!--                    <p>בחר בין 1 ל 3 טעמים שונים</p>-->
-<!--                    להוסיף תנאי שמתי שיש 1 מופיע פקודה אחרת ומתי שיש 0.5 פקודה אחרת-->
-                    <div class="tastes-wrapper">
-                        <div> <img src="pages/order/static/img/fistuk.jpg" alt="fistuk" onclick="openModal();currentSlide(1)" class="taste-image hover-shadow cursor"><br>
-                            <input type="checkbox" id="fistuk" name="ice_cream_tastes" value="fistuk" >
-                            <label for="fistuk">פיסטוק</label></div>
-                        <div> <img src="pages/order/static/img/oreoCream.jpg" alt="oreo-cream" onclick="openModal();currentSlide(2)" class="taste-image hover-shadow cursor"><br>
-                            <input type="checkbox" id="oreo-cream" name="ice_cream_tastes" value="oreo-cream" >
-                            <label for="oreo-cream">קרם עוגיות</label></div>
-                        <div> <img src="pages/order/static/img/pavlova.jpg" alt="pavlova" onclick="openModal();currentSlide(3)" class="taste-image hover-shadow cursor"><br>
-                            <input type="checkbox" id="pavlova" name="ice_cream_tastes" value="pavlova" >
-                            <label for="pavlova">פבלובה</label>
-                        </div>
-
-                    </div>
-
-                </fieldset>
-                <input type="submit" value="Submit">
-
-            </form>
-        </div>
-
-        <div id="Yogurt" class="tabcontent">
-            <div class="description">
-                <h3>יוגורט</h3>
-                <p>עבור יוגורט במשקל חצי קילו או קילו, ניתן לבחור בין 1 ל 3 טעמים שונים, מגיע עם 3 גביעים וכפיות.</p>
+        <div class="product-area">
+            <div class="border">
+                <h4>גלידת פבלובה</h4>
+                <img src="static/img/iceCream/pavlova_full.jpg" alt="גלידת פבלובה">
+                <div>גלידת שכבות המורכבת מקרם מרנג עשיר ופריך ומסורבה פירות יער</div>
             </div>
         </div>
-
-        <div id="Cookie" class="tabcontent">
-            <div class="description">
-                <h3>קוקילידה</h3>
-                <p>עבור כל יחידה אחת של קוקילידה יש לבחור סוג גלידה וסוג עוגיה</p>
-            </div>
-        </div>
-
-        <!-- The Modal/Lightbox -->
-        <div dir='ltr' id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-
-            <!-- Caption text taste name -->
-            <div class="caption-container">
-                <h3 id="caption"></h3>
-            </div>
-
-            <div class="modal-content">
-
-                <div class="mySlides">
-                     <img src="pages/order/static/img/fistuk_full.jpg" alt="פיסטוק" style="width:100%" class="demo">
-                    <div>פיסטוקים מהטרואר המשובח בעולם. גדלים על אדמה וולקנית בסביבת הר געש כבוי בסיציליה ומתאפיינים בצבע עז וארומות פירותיות, אדמתיות ומעושנות</div>
-                </div>
-                <div class="mySlides">
-                    <img src="pages/order/static/img/oreoCream_full.jpg" alt="קרם עוגיות" style="width:100%" class="demo">
-                    <div>המון עוגיות אוריאו פריכות פוגשות חלב ושמנת טריים</div>
-                </div>
-                <div class="mySlides">
-                    <img src="pages/order/static/img/pavlova_full.jpg" alt="פבלובה" style="width:100%" class="demo">
-                    <div>גלידת שכבות המורכבת מקרם מרנג עשיר ופריך ומסורבה פירות יער</div>
-                </div>
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-            </div>
-        </div>
-
     </main>
 
 </body>

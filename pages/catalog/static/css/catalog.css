@@ -1,22 +1,9 @@
 /*reminder - this css is imported also to the order page*/
 @import "/group15/static/css/webStyle.css";
 
-.catalog{
-    padding: 12px 12px;
-}
-.description{
-    background-color: #FFEBF5;
-    text-align: center;
-    margin: 0px 0px;
-}
-
-.taste-image{
-    border-radius: 50%;
-}
-
 .tastes-wrapper div{
     display: inline-block;
-    padding: 12px 25px;
+    margin: 12px 25px;
     text-align: center;
 }
 
@@ -25,3 +12,23 @@
     justify-content: center;
     align-content: center;
 }
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/*this relevant only to catalog*/
+
+.border{
+    border: 2px solid #C00060;
+    background-color: #FFEBF5;
+}
+
+.border.hover-shadow {
+    transition: 0.3s;
+}
+
