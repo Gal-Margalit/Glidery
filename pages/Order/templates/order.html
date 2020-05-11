@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="pages/order/static/css/order.css">
     <script src="pages/order/static/js/order.js"></script>
 
-
 </head>
 <body dir="rtl" class="general-style">
     <header>
@@ -32,33 +31,33 @@
                 </p>
             </div>
 
-            <form method="get"  action="/order" >
+            <form method="get"  action="/iceCreamOrder" >
                 <fieldset>
                     <div class="add-product-bar">
                         <div class="amount-area">
-                            <label for="amount">משקל קופסא בק"ג:</label>
-                            <select onchange="amountSelect()" id="amount" name="amount">
+                            <label for="amountIceCream">משקל קופסא בק"ג:</label>
+                            <select onchange="amountSelect()" id="amountIceCream" name="amount">
                                 <option id="half" value="0.5">0.5</option>
                                 <option id="one" value="1">1</option>
                             </select>
                         </div>
-                        <button type="submit" value="submit" class="button"><span><i class="fa fa-cart-plus"></i> הוספה לסל </span></button>
+                        <button type="submit" value="submitIceCream" class="button"><span><i class="fa fa-cart-plus"></i> הוספה לסל </span></button>
                         <div class="amount-area quantity-area">
-                            <label for="quantity">כמות קופסאות מהרכב זה:</label>
-                            <input type="number" id="quantity" name="quantity" value="1" min="0" step="1"/>
+                            <label for="quantityIceCream">כמות קופסאות מהרכב זה:</label>
+                            <input type="number" id="quantityIceCream" name="quantity" value="1" min="0" step="1"/>
                         </div>
 
                     </div>
-                    <div class="amount-text" id="half-text">בחר בין 1 ל 3 טעמים שונים</div>
-                    <div class="amount-text" id="one-text">בחר בין 1 ל 5 טעמים שונים</div>
+                    <div class="amount-text" id="half-text">בחירת טעמי גלידה: בחר בין 1 ל 3 טעמים שונים</div>
+                    <div class="amount-text" id="one-text">בחירת טעמי גלידה: בחר בין 1 ל 5 טעמים שונים</div>
                     <div class="tastes-wrapper">
-                        <div> <img src="pages/order/static/img/fistuk.jpg" alt="fistuk" onclick="openModal();currentSlide(1)" class="taste-image hover-shadow cursor"><br>
+                        <div> <img src="static/img/iceCream/fistuk.jpg" alt="fistuk" onclick="openModal();currentSlide(1)" class="taste-image hover-shadow cursor"><br>
                             <input type="checkbox" id="fistuk" name="ice_cream_tastes" value="fistuk" >
                             <label for="fistuk">פיסטוק</label></div>
-                        <div> <img src="pages/order/static/img/oreoCream.jpg" alt="oreo-cream" onclick="openModal();currentSlide(2)" class="taste-image hover-shadow cursor"><br>
+                        <div> <img src="static/img/iceCream/oreoCream.jpg" alt="oreo-cream" onclick="openModal();currentSlide(2)" class="taste-image hover-shadow cursor"><br>
                             <input type="checkbox" id="oreo-cream" name="ice_cream_tastes" value="oreo-cream" >
                             <label for="oreo-cream">קרם עוגיות</label></div>
-                        <div> <img src="pages/order/static/img/pavlova.jpg" alt="pavlova" onclick="openModal();currentSlide(3)" class="taste-image hover-shadow cursor"><br>
+                        <div> <img src="static/img/iceCream/pavlova.jpg" alt="pavlova" onclick="openModal();currentSlide(3)" class="taste-image hover-shadow cursor"><br>
                             <input type="checkbox" id="pavlova" name="ice_cream_tastes" value="pavlova" >
                             <label for="pavlova">פבלובה</label>
                         </div>
@@ -73,8 +72,61 @@
         <div id="Yogurt" class="tabcontent">
             <div class="description">
                 <h3>יוגורט</h3>
-                <p>עבור יוגורט במשקל חצי קילו או קילו, ניתן לבחור בין 1 ל 3 טעמים שונים, מגיע עם 3 גביעים וכפיות.</p>
+                <p>לצד היצע הגלידות הנרחב הקיים בויטרינות, מוגשת אצלנו גלידת קרם יוגורט דלות שומן, במתיקות מעודנת, בעלות מרקם רך וקרמי.
+                    <br><br>
+                    עבור יוגורט במשקל חצי קילו או קילו, ניתן לבחור בין 1 ל 3 טעמים שונים, מגיע עם כפיות.
+                    <br><br>
+                    לפירוט אודות טעם היוגורט הרצוי ניתן ללחוץ על התמונה המתאימה
+                </p>
             </div>
+
+            <form method="get"  action="/yogurtOrder" >
+                <fieldset>
+                    <div class="add-product-bar">
+                        <div class="amount-area">
+                            <label for="amountYogurt">משקל קופסא בק"ג:</label>
+                            <select id="amountYogurt" name="amount">
+                                <option value="0.5">0.5</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        <button type="submit" value="submitYogurt" class="button"><span><i class="fa fa-cart-plus"></i> הוספה לסל </span></button>
+                        <div class="amount-area quantity-area">
+                            <label for="quantityYogurt">כמות קופסאות מהרכב זה:</label>
+                            <input type="number" id="quantityYogurt" name="quantity" value="1" min="0" step="1"/>
+                        </div>
+                    </div>
+                    <div class="amount-text" >1) בחירת טעמי יוגורט: בחר בין 1 ל 3 טעמים שונים</div>
+                    <div class="tastes-wrapper">
+                        <div> <img src="static/img/yogurt/basic.png" alt="basic" onclick="openModal();currentSlide(4)" class="taste-image hover-shadow cursor"><br>
+                            <input type="checkbox" id="basic" name="yogurt_tastes" value="basic" >
+                            <label for="basic">קרם יוגורט</label></div>
+                        <div> <img src="static/img/yogurt/Berries.jpg" alt="berries" onclick="openModal();currentSlide(5)" class="taste-image hover-shadow cursor"><br>
+                            <input type="checkbox" id="berries" name="yogurt_tastes" value="berries" >
+                            <label for="berries">יוגורט פירות יער</label></div>
+                        <div> <img src="static/img/yogurt/tropic.jpeg" alt="tropic" onclick="openModal();currentSlide(6)" class="taste-image hover-shadow cursor"><br>
+                            <input type="checkbox" id="tropic" name="yogurt_tastes" value="tropic" >
+                            <label for="tropic">יוגורט פירות טרופיים</label>
+                        </div>
+                    </div>
+
+                    <div class="amount-text" >2) בחירת תוספות: בחר עד 10 תוספות שונות</div>
+                    <div class="tastes-wrapper">
+                        <div> <img src="static/img/yogurt/toppings/choclateChip.png" alt="choclateChip" onclick="openModal();currentSlide(7)" class="taste-image hover-shadow cursor"><br>
+                            <input type="checkbox" id="choclateChip" name="toppings_yogurt_tastes" value="choclateChip" >
+                            <label for="choclateChip">שוקולד צ'יפס</label></div>
+                        <div> <img src="static/img/yogurt/toppings/mango.jpg" alt="mango" onclick="openModal();currentSlide(8)" class="taste-image hover-shadow cursor"><br>
+                            <input type="checkbox" id="mango" name="toppings_yogurt_tastes" value="mango" >
+                            <label for="mango">קוביות מנגו</label></div>
+                        <div> <img src="static/img/yogurt/toppings/pomegranateBerries.png" alt="pomegranateBerries" onclick="openModal();currentSlide(9)" class="taste-image hover-shadow cursor"><br>
+                            <input type="checkbox" id="pomegranateBerries" name="toppings_yogurt_tastes" value="pomegranateBerries" >
+                            <label for="pomegranateBerries">גרעיני רימון</label>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+            </form>
         </div>
 
         <div id="Cookie" class="tabcontent">
@@ -82,6 +134,47 @@
                 <h3>קוקילידה</h3>
                 <p>עבור כל יחידה אחת של קוקילידה יש לבחור סוג גלידה וסוג עוגיה</p>
             </div>
+            <form method="get"  action="/cookieOrder" >
+                <fieldset>
+                    <div class="add-product-bar">
+                        <button type="submit" value="submitCookie" class="button"><span><i class="fa fa-cart-plus"></i> הוספה לסל </span></button>
+                        <div class="amount-area quantity-area">
+                            <label for="quantityYogurt">כמות קוקילידות מהרכב זה:</label>
+                            <input type="number" id="quantityCookie" name="quantity" value="1" min="0" step="1"/>
+                        </div>
+                    </div>
+                    <div class="amount-text" >1) בחירת העוגיה: בחר את סוג העוגיה הרצויה</div>
+                    <div class="tastes-wrapper">
+                        <div> <img src="static/img/cookie/BrownChocolateChip.jpg" alt="brownChip" onclick="openModal();currentSlide(10)" class="taste-image hover-shadow cursor"><br>
+                            <input type="radio" id="brownChip" name="cookie_type" value="brownChip" >
+                            <label for="brownChip">עוגיה קהה שוקולד צ'יפס</label></div>
+                        <div> <img src="static/img/cookie/sugarCookie.jpg" alt="sugar" onclick="openModal();currentSlide(11)" class="taste-image hover-shadow cursor"><br>
+                            <input type="radio" id="sugar" name="cookie_type" value="sugar" >
+                            <label for="sugar">עוגיית סוכר</label></div>
+                        <div> <img src="static/img/cookie/whiteChocolateChip.jpg" alt="whiteChip" onclick="openModal();currentSlide(12)" class="taste-image hover-shadow cursor"><br>
+                            <input type="radio" id="whiteChip" name="cookie_type" value="tropic" >
+                            <label for="whiteChip">עוגיה בהירה שוקולד צ'יפס</label>
+                        </div>
+                    </div>
+                    <div class="amount-text">2) בחירת המילוי: בחר בחר את טעם הגלידה הרצוי</div>
+                    <div class="tastes-wrapper">
+                        <div> <img src="static/img/iceCream/fistuk.jpg" alt="fistuk" onclick="openModal();currentSlide(1)" class="taste-image hover-shadow cursor"><br>
+                            <input type="radio" id="fistukCookie" name="cookie_filling" value="fistuk" >
+                            <label for="fistukCookie">פיסטוק</label></div>
+                        <div> <img src="static/img/iceCream/oreoCream.jpg" alt="oreo-cream" onclick="openModal();currentSlide(2)" class="taste-image hover-shadow cursor"><br>
+                            <input type="radio" id="oreo-creamCookie" name="cookie_filling" value="oreo-cream" >
+                            <label for="oreo-creamCookie">קרם עוגיות</label></div>
+                        <div> <img src="static/img/iceCream/pavlova.jpg" alt="pavlova" onclick="openModal();currentSlide(3)" class="taste-image hover-shadow cursor"><br>
+                            <input type="radio" id="pavlovaCookie" name="cookie_filling" value="pavlova" >
+                            <label for="pavlovaCookie">פבלובה</label>
+                        </div>
+
+                    </div>
+
+
+                </fieldset>
+
+            </form>
         </div>
 
         <!-- The Modal/Lightbox -->
@@ -94,24 +187,52 @@
             </div>
 
             <div class="modal-content">
-
-                <div class="mySlides">
-                     <img src="pages/order/static/img/fistuk_full.jpg" alt="פיסטוק" style="width:100%" class="demo">
-                    <div>פיסטוקים מהטרואר המשובח בעולם. גדלים על אדמה וולקנית בסביבת הר געש כבוי בסיציליה ומתאפיינים בצבע עז וארומות פירותיות, אדמתיות ומעושנות</div>
-                </div>
-                <div class="mySlides">
-                    <img src="pages/order/static/img/oreoCream_full.jpg" alt="קרם עוגיות" style="width:100%" class="demo">
-                    <div>המון עוגיות אוריאו פריכות פוגשות חלב ושמנת טריים</div>
-                </div>
-                <div class="mySlides">
-                    <img src="pages/order/static/img/pavlova_full.jpg" alt="פבלובה" style="width:100%" class="demo">
-                    <div>גלידת שכבות המורכבת מקרם מרנג עשיר ופריך ומסורבה פירות יער</div>
-                </div>
+                        <div class="mySlides">
+                         <img src="static/img/iceCream/fistuk_full.jpg" alt="גלידת פיסטוק" style="width:100%" class="demo">
+                        <div>פיסטוקים מהטרואר המשובח בעולם. גדלים על אדמה וולקנית בסביבת הר געש כבוי בסיציליה ומתאפיינים בצבע עז וארומות פירותיות, אדמתיות ומעושנות</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/iceCream/oreoCream_full.jpg" alt="גלידת קרם עוגיות" style="width:100%" class="demo">
+                        <div>המון עוגיות אוריאו פריכות פוגשות חלב ושמנת טריים</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/iceCream/pavlova_full.jpg" alt="גלידת פבלובה" style="width:100%" class="demo">
+                        <div>גלידת שכבות המורכבת מקרם מרנג עשיר ופריך ומסורבה פירות יער</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/yogurt/basic_full.png" alt="קרם יוגורט" style="width:100%" class="demo">
+                        <div>היוגורט הינו בעל אחוזי שומן נמוכים- 2.8% בלבד וערך קלורי של 120 קק"ל ל-100 גרם בלבד. היוגורט מופק מחלב טרי בלבד ומיוצר בתהליך טבעי ומבוקר של תסיסה בו הופך רוב הלקטוז (סוכר החלב) לחומצה לקטית (חומצת חלב) אשר מקנה ליוגורט את הטעם והריח הטיפוסיים והופכת את החלב לנוח יותר לעיכול</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/yogurt/berries_full.jpg" alt="יוגורט פירות יער" style="width:100%" class="demo">
+                        <div>שילוב של יוגורט איכותי,פטל אדום , דומדמניות שחורות (קסיס, נואר דה בורגון) ונגיעות של בויסנברי - גרגר יער שחור</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/yogurt/tropic_full.jpeg" alt="יוגורט פירות טרופיים" style="width:100%" class="demo">
+                        <div>שילוב ייחודי של יוגורט איכותי, מנגו, קוקוס, בננה ופסיפלורה. 50% פירות אקזוטיים טבעיים, היוגורט עם כ- 3% שומן בלבד, ללא צבעי מאכל, ללא חומרים משמרים מפירות טבעיים בלבד! שילוב חמצמץ מתקתק שיוצר טעם מושלם</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/yogurt/toppings/choclateChip_full.png" alt="שוקולד צ'יפס" style="width:100%" class="demo">
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/yogurt/toppings/mango_full.jpg" alt="קוביות מנגו" style="width:100%" class="demo">
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/yogurt/toppings/pomegranateBerries_full.jpg" alt="גרעיני רימון" style="width:100%" class="demo">
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/cookie/‏‏BrownChocolateChip_full.jpg" alt="עוגיה קהה שוקולד צ'יפס" style="width:100%" class="demo">
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/cookie/‏‏sugarCookie_full.jpg" alt="עוגיית סוכר" style="width:100%" class="demo">
+                    </div>
+                    <div class="mySlides">
+                        <img src="static/img/cookie/‏‏whiteChocolateChip_full.jpg" alt="עוגיה בהירה שוקולד צ'יפס" style="width:100%" class="demo">
+                    </div>
 
                 <!-- Next/previous controls -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 
             </div>
         </div>

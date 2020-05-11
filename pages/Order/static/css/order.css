@@ -1,5 +1,6 @@
 @import "/group15/static/css/webStyle.css";
 @import "/group15/pages/order/static/css/lightbox.css";
+@import "/group15/pages/catalog/static/css/catalog.css";
 
 /* Style the tab */
 .tab {
@@ -33,13 +34,6 @@
     display: none;
     padding: 12px 12px;
     border-top: none;
-
-}
-
-.description{
-    background-color: #FFEBF5;
-    text-align: center;
-
 }
 
 fieldset {
@@ -62,6 +56,9 @@ fieldset {
 .quantity-area{
     float: left;
 }
+.quantity-area input{
+    width: 45px;
+}
 
 .amount-text{
     padding: 13px 16px;
@@ -71,24 +68,7 @@ fieldset {
     display: none;
 }
 
-.taste-image{
-    border-radius: 50%;
-}
-
-.tastes-wrapper div{
-    display: inline-block;
-    padding: 12px 25px;
-    text-align: center;
-}
-
-.tastes-wrapper {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-}
-
-/*-------------Arrow Button--------------*/
+/*-------------Arrow Cart Button--------------*/
 
 .button {
     border-radius: 10px;
